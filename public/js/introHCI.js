@@ -5,9 +5,16 @@ $(document).ready(function() {
 	initializePage();
 });
 
+function analytics(e) {
+    event.preventDefault();
+    ga('create', 'UA-114588818-1', 'auto');
+    ga("send", "event", 'like', 'click');
+}
+
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	// your code here
+    $(".btn.btn-default.likeBtn").click(analytics);
 }
